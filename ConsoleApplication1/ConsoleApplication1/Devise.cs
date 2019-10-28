@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace MyApp
 {
-    class Devise
+    public abstract class Devise
     {
-        string type;
+        string type { get; set; }
         int memory { get; set; }
-        public object Messagebox { get; private set; }
+        
 
-        int storage;
-        string processor;
+        //int storage;
+        //string processor;
+        // выводим вид девайса
         public void ShowType()
         {
-            Messagebox
+            Console.WriteLine(this.type);
+            //MessageBox();
         }
+
 
     }
 }
