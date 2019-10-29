@@ -7,25 +7,48 @@ using System.IO;
 
 namespace MyApp
 {
-    public class figure
+    public class Figure
     {
         public string type { get; set; }
-        //int memory { get; set; }
-        
 
-        //int storage;
-        //string processor;
         // выводим вид девайса
         public void ShowType()
         {
             Console.WriteLine(type);
             //MessageBox();
         }
-        public void DrawFigure()
+        public void DrawFigure(int height)
         {
+            int maxWidth = height;
+            int minWidth = 0;
+
+
+            for (int i = minWidth; i < maxWidth; i++)
+            {
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+            //Console.WriteLine();
+
+            for (int i = minWidth; i < maxWidth; i++)
+            {
+                for (int j = i; j < maxWidth; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+
 
         }
 
-
     }
+
+
 }
+

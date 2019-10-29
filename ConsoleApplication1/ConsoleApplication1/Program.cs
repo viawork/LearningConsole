@@ -10,15 +10,17 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            int height = 1;
-            while (height > 0)
+           // int height = 1;
+           // while (height > 0)
             {
-               Console.WriteLine("Введите высоту");
-               height = int.Parse(Console.ReadLine());
-               triangle(height,true);
-                figure fg = new figure();
+              // Console.WriteLine("Введите высоту");
+               //height = int.Parse(Console.ReadLine());
+                // Triangle(height,true);
+                Figure fg = new Figure();
+                fg.ShowType();
                 Figname(1);
                //triangle(height, false);
+               Console.ReadKey();
             }
         }
         /// <summary>
@@ -27,14 +29,28 @@ namespace MyApp
         /// <param name="number"></param>
         private static void Figname(byte number)
             {
-                var figlist = new List < string >() {"точка","отрезок", "треугольник", "четырехугольник"};
-                //figlist.
-                foreach (var lelem in figlist)
+            List<string> figlist = new List<string>() { "точка", "отрезок", "треугольник", "четырехугольник" };
+            /*
+            foreach (string lelem in figlist)
                 {
                     Console.WriteLine(lelem);
                 }
+                */
+            string[] teams = { "Бавария", "Боруссия", "Реал Мадрид", "Манчестер Сити", "ПСЖ", "Барселона" };
+            var selectedTeams = teams.Where(t => t.ToUpper().StartsWith("Б")).OrderBy(t => t).ToArray();
+            var selectedTeamsArray = teams.Where(t => t.ToUpper().EndsWith("а")).OrderBy(t => t).ToArray();
+            foreach (string s in selectedTeams) // вычисление 1
+            {
+                 Console.WriteLine(s);
             }
-       private static void triangle( int height, bool direction)
+            foreach (string s in selectedTeamsArray) // вычисление 1
+            {
+                 Console.WriteLine(s);
+            }
+
+
+        }
+        private static void Triangle(int height)
         {
             int maxWidth = height;
             int minWidth = 0; 
