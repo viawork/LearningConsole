@@ -16,9 +16,24 @@ namespace MyApp
                Console.WriteLine("Введите высоту");
                height = int.Parse(Console.ReadLine());
                triangle(height,true);
+                figure fg = new figure();
+                Figname(1);
                //triangle(height, false);
             }
         }
+        /// <summary>
+        ////выводит наименования фигур из списка
+        /// </summary>
+        /// <param name="number"></param>
+        private static void Figname(byte number)
+            {
+                var figlist = new List < string >() {"точка","отрезок", "треугольник", "четырехугольник"};
+                //figlist.
+                foreach (var lelem in figlist)
+                {
+                    Console.WriteLine(lelem);
+                }
+            }
        private static void triangle( int height, bool direction)
         {
             int maxWidth = height;

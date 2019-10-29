@@ -7,10 +7,10 @@ using System.IO;
 
 namespace MyApp
 {
-    public abstract class Devise
+    public class figure
     {
-        string type { get; set; }
-        int memory { get; set; }
+        public string type { get; set; }
+        //int memory { get; set; }
         
 
         //int storage;
@@ -18,8 +18,12 @@ namespace MyApp
         // выводим вид девайса
         public void ShowType()
         {
-            Console.WriteLine(this.type);
+            Console.WriteLine(type);
             //MessageBox();
+        }
+        public void DrawFigure()
+        {
+
         }
 
 
